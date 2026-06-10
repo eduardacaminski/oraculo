@@ -1,0 +1,110 @@
+body{
+  background: radial-gradient(circle at center, #d9699b 0%, #8f4668 60%, #642341 100%);
+  font-family: 'Playfair Display', serif;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 90vh;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/estrela.jpg'); 
+  background-repeat: repeat; 
+  background-size: small; 
+  
+  opacity: 0.2; 
+  
+  z-index: -1; 
+  pointer-events: none; 
+}
+.topo-esquerda, 
+.baixo-direita {
+  position: fixed;      
+  width: 220px;         
+  opacity: 0.5;        
+  pointer-events: none; 
+  z-index: 1;           
+}
+.topo-esquerda {
+  top: 0;
+  left: 0;
+}
+.baixo-direita {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg); /* Mantém o seu giro perfeito */
+}
+.layout{
+  background-color: rgba(228, 164, 196, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: #e4a4c4;
+  text-align: center;
+  padding: 50px;
+  border-radius: 30px;
+  height: 25rem;
+  width: 30rem;
+  box-sizing: border-box;
+  position: relative; 
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.layout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(228, 164, 196, 0.4); 
+  border-radius: 30px;
+  z-index: -1; 
+  
+  
+  transform: rotate(-4deg); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.emoji h1{
+font-size: 3rem;
+  margin: 0;
+ 
+  filter: drop-shadow(0 0 10px #ffb3d1);
+}
+.emoji h2{
+  color: #3b260d;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+.texto{
+  color: #3b260d;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+.botoes button{
+  background-color: #f8c9dd;
+  color: #3b260d;
+   border: 1px solid #f8c9dd;
+   font-family: 'Playfair Display', serif;
+   font-size: 1.1rem;
+   padding: 21px;
+   border-radius: 4rem;
+   font-weight: 600;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+.botoes button:hover{
+  background-color: #803256;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
